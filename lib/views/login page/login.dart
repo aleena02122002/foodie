@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hacroject/components/colors.dart';
+import 'package:hacroject/components/elevatedButton.dart';
 import 'package:hacroject/components/textFeild.dart';
 import 'package:hacroject/views/home%20page/homeView.dart';
 import 'package:hacroject/views/register%20page/register.dart';
@@ -32,6 +33,8 @@ class LoginView extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 20.0),
                     child: Image(image: AssetImage("assets/images/logo.png")),
                   ),
+                  _text("Deliver Favourite Food", whites,21.0),
+                  SizedBox(height: 15),
                   Container(
                     height: 398,
                     width: 300,
@@ -42,24 +45,21 @@ class LoginView extends StatelessWidget {
                       children: [
                         SizedBox(height: 40),
                         const Text(
-                          "Signin",
+                          "Login",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
+                            fontFamily: "SF"
                           ),
                         ),
-                        const SizedBox(
-                          height: 20,
-                        ),
+
                         MyTextField(
                             hintText: 'Email',
                             controller: emailController,
                             prefixIcon: Icons.email_rounded,
                             focusNode: _focusNode1),
-                        const SizedBox(
-                          height: 10,
-                        ),
+
                         MyTextField(
                           hintText: "Password",
                           controller: passwordController,
@@ -80,30 +80,8 @@ class LoginView extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
-                        SizedBox(
-                          height: 40,
-                          width: 200,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Get.to(Homeview());
-                            },
-                            child: const Text(
-                              "Signin",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white38,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
-                          ),
-                        ),
+                        Elevatedbutton(text: "Sign in"),
+                        _text("Or", red.withOpacity(0.5), 15.0),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 110.0,vertical: 10),
                           child: Row(
@@ -117,7 +95,8 @@ class LoginView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Text("Don't have an account?",style: TextStyle(color: Colors.white),),
+                  SizedBox(height: 10),
+                  _text("Don't have an account?", whites, 14.0),
                   TextButton(onPressed: (){Get.to(SignUpView());}, child: Text("REGISTER",style: TextStyle(color: Colors.white),),)
 
                 ],
@@ -126,6 +105,12 @@ class LoginView extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+  _text(String text, Color colors,double size) {
+    return Text(
+      text,
+      style: TextStyle(color: colors,fontSize: size,fontFamily: "SF"),
     );
   }
 }

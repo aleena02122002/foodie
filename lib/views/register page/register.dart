@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hacroject/components/colors.dart';
+import 'package:hacroject/components/elevatedButton.dart';
 import 'package:hacroject/components/textFeild.dart';
 import 'package:hacroject/views/home%20page/homeView.dart';
 
@@ -8,9 +9,11 @@ class SignUpView extends StatelessWidget {
   SignUpView({super.key});
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final userName = TextEditingController();
 
   final FocusNode _focusNode1 = FocusNode();
   final FocusNode _focusNode2 = FocusNode();
+  final FocusNode _focusNode3 = FocusNode();
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +34,10 @@ class SignUpView extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 20.0),
                     child: Image(image: AssetImage("assets/images/logo.png")),
                   ),
-                  Text("Deliver Favourite Food",style: TextStyle(color: Colors.white),),
+                  _text("Deliver Favourite Food", whites, 21.5),
+                  Text("",style: TextStyle(color: Colors.white),),
                   Container(
-                    height: 398,
+                    height: 450,
                     width: 300,
                     decoration: BoxDecoration(
                         gradient: containerGradient.gradientColor,
@@ -47,19 +51,21 @@ class SignUpView extends StatelessWidget {
                             color: Colors.white,
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
+                            fontFamily: "SF"
                           ),
                         ),
-                        const SizedBox(
-                          height: 20,
-                        ),
+                        MyTextField(
+                            hintText: 'UserName',
+                            controller: userName,
+                            prefixIcon: Icons.person,
+                            focusNode: _focusNode3),
+
                         MyTextField(
                             hintText: 'Email',
                             controller: emailController,
                             prefixIcon: Icons.email_rounded,
                             focusNode: _focusNode1),
-                        const SizedBox(
-                          height: 10,
-                        ),
+
                         MyTextField(
                           hintText: "Password",
                           controller: passwordController,
@@ -81,29 +87,7 @@ class SignUpView extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 20),
-                        SizedBox(
-                          height: 40,
-                          width: 200,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Get.to(Homeview());
-                            },
-                            child: const Text(
-                              "Create Account",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white38,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
-                          ),
-                        ),
+                        Elevatedbutton(text: "Create Account"),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 110.0,vertical: 10),
                           child: Row(
@@ -117,14 +101,21 @@ class SignUpView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Text("Don't have an account?",style: TextStyle(color: Colors.white),),
-                  Text("REGISTER",style: TextStyle(color: Colors.white),),
+                 _text("Already have an account?", whites, 14),
+                  TextButton(onPressed: (){Get.back();}, child: Text("SIGN IN",style: TextStyle(color: Colors.white),),),
+
                 ],
               ),
             ),
           ),
         ),
       ),
+    );
+  }
+  _text(String text, Color colors,double size) {
+    return Text(
+      text,
+      style: TextStyle(color: colors,fontSize: size,fontFamily: "SF"),
     );
   }
 }

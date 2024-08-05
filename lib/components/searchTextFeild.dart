@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hacroject/components/colors.dart';
 
 class SearchFeild extends StatelessWidget {
   final String hintText;
@@ -20,10 +21,8 @@ class SearchFeild extends StatelessWidget {
         validator: validator,
         autovalidateMode: AutovalidateMode.onUserInteraction,
         decoration: InputDecoration(
-            labelText: hintText,
-            labelStyle: TextStyle(
-              color: (focusNode?.hasFocus ?? false) ? Colors.white : Colors.black,
-            ),
+           hintText: hintText,
+            hintStyle:TextStyle(color: whites),
             prefixIcon: prefixIcon != null? Icon(prefixIcon) : null,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(15)),

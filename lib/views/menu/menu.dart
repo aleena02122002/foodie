@@ -23,8 +23,8 @@ class _MenuViewState extends State<MenuView> {
         extendBodyBehindAppBar: true,
         appBar: AppBar(
           forceMaterialTransparency: true,
-          leading: Icon(Icons.arrow_back_ios),
-          actions: [Icon(Icons.favorite)],
+          leading: IconButton(onPressed: (){Get.back();}, icon: Icon(Icons.arrow_back_ios,color: whites,)),
+          actions: [Icon(Icons.favorite,color: whites,)],
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -224,7 +224,7 @@ class _MenuViewState extends State<MenuView> {
   _text(String text, Color colors) {
     return Text(
       text,
-      style: TextStyle(color: colors),
+      style: TextStyle(color: colors,fontFamily: "SF"),
     );
   }
 }

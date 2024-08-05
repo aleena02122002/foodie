@@ -27,6 +27,7 @@ class _HomeviewState extends State<Homeview> {
               backgroundColor: Colors.transparent,
               appBar: AppBar(
                 backgroundColor: Colors.transparent,
+
               ),
               body: SingleChildScrollView(
                 child: Column(
@@ -192,7 +193,6 @@ class _HomeviewState extends State<Homeview> {
                                     left: 16,
                                     child: ElevatedButton(
                                       onPressed: () {
-                                        Get.to(MenuView());
                                       },
                                       style: ElevatedButton.styleFrom(
                                           backgroundColor: const Color.fromARGB(255, 2, 83, 222)
@@ -295,7 +295,7 @@ class _HomeviewState extends State<Homeview> {
                     SingleChildScrollView(
                       scrollDirection: Axis.vertical,
                       child: Column(children: [
-                        GestureDetector(onTap: (){},child: Image(image: AssetImage("assets/images/Card.png"))),
+                        GestureDetector(onTap: (){ Get.to(MenuView());},child: Image(image: AssetImage("assets/images/Card.png"))),
                         SizedBox(height: 20),
                         GestureDetector(onTap: (){},child: Image(image: AssetImage("assets/images/Card.png"))),
                       ],),

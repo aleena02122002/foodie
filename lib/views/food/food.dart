@@ -21,9 +21,12 @@ class _FoodViewState extends State<FoodView> {
         extendBodyBehindAppBar: true,
         appBar: AppBar(
           forceMaterialTransparency: true,
-          leading: Icon(
-            Icons.arrow_back_ios,
-            color: whites,
+          leading: IconButton(
+            onPressed: () { Get.back();},
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: whites,
+            ),
           ),
           actions: [
             Icon(
@@ -116,7 +119,6 @@ class _FoodViewState extends State<FoodView> {
                               setState(() {
                                 isChacked = newValue;
                               });
-
                             }),
                       ],
                     ),
@@ -133,7 +135,6 @@ class _FoodViewState extends State<FoodView> {
                               setState(() {
                                 isChacked = newValue;
                               });
-
                             }),
                       ],
                     ),
@@ -150,7 +151,6 @@ class _FoodViewState extends State<FoodView> {
                               setState(() {
                                 isChacked = newValue;
                               });
-
                             }),
                       ],
                     ),
@@ -195,7 +195,7 @@ class _FoodViewState extends State<FoodView> {
   _text(String text, Color colors, double size) {
     return Text(
       text,
-      style: TextStyle(color: colors, fontSize: size),
+      style: TextStyle(color: colors, fontSize: size,fontFamily: "SF"),
     );
   }
 }
