@@ -20,10 +20,10 @@ class OrderView extends StatelessWidget {
         body: Column(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               child: _text("Order Details", whites, 25),
             ),
-            Row(
+            const Row(
               children: [
                Image(image: AssetImage("assets/images/product2.png")),
 

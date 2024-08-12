@@ -8,7 +8,7 @@ class SearchFeild extends StatelessWidget {
   final FocusNode? focusNode;
   final String? Function(String?)? validator;
 
-  SearchFeild({Key? key, required this. hintText, required this. controller, required this. prefixIcon, required this. focusNode, this. validator});
+  const SearchFeild({super.key, required this. hintText, required this. controller, required this. prefixIcon, required this. focusNode, this. validator});
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +24,11 @@ class SearchFeild extends StatelessWidget {
            hintText: hintText,
             hintStyle:TextStyle(color: whites),
             prefixIcon: prefixIcon != null? Icon(prefixIcon) : null,
-            enabledBorder: OutlineInputBorder(
+            enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(15)),
               borderSide: BorderSide(color: Colors.white),
             ),
-            focusedBorder: OutlineInputBorder(
+            focusedBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(6.0)),
               borderSide: BorderSide(color: Colors.white),
             )

@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:hacroject/components/colors.dart';
 import 'package:hacroject/components/elevatedButton.dart';
 import 'package:hacroject/components/textFeild.dart';
-import 'package:hacroject/views/home%20page/homeView.dart';
 
 class SignUpView extends StatelessWidget {
   SignUpView({super.key});
@@ -30,12 +29,12 @@ class SignUpView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 50),
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 20.0),
                     child: Image(image: AssetImage("assets/images/logo.png")),
                   ),
                   _text("Deliver Favourite Food", whites, 21.5),
-                  Text("",style: TextStyle(color: Colors.white),),
+                  const Text("",style: TextStyle(color: Colors.white),),
                   Container(
                     height: 450,
                     width: 300,
@@ -44,7 +43,7 @@ class SignUpView extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20)),
                     child: Column(
                       children: [
-                        SizedBox(height: 40),
+                        const SizedBox(height: 40),
                         const Text(
                           "Signup",
                           style: TextStyle(
@@ -87,9 +86,9 @@ class SignUpView extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 20),
-                        Elevatedbutton(text: "Create Account"),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 110.0,vertical: 10),
+                        const Elevatedbutton(text: "Create Account"),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 110.0,vertical: 10),
                           child: Row(
                             children: [
                               Image(
@@ -102,7 +101,7 @@ class SignUpView extends StatelessWidget {
                     ),
                   ),
                  _text("Already have an account?", whites, 14),
-                  TextButton(onPressed: (){Get.back();}, child: Text("SIGN IN",style: TextStyle(color: Colors.white),),),
+                  TextButton(onPressed: (){Get.back();}, child: const Text("SIGN IN",style: TextStyle(color: Colors.white),),),
 
                 ],
               ),

@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:hacroject/components/colors.dart';
 import 'package:hacroject/components/elevatedButton.dart';
 import 'package:hacroject/components/textFeild.dart';
-import 'package:hacroject/views/home%20page/homeView.dart';
 import 'package:hacroject/views/register%20page/register.dart';
 
 class LoginView extends StatelessWidget {
@@ -29,12 +28,12 @@ class LoginView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 50),
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 20.0),
                     child: Image(image: AssetImage("assets/images/logo.png")),
                   ),
                   _text("Deliver Favourite Food", whites,21.0),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Container(
                     height: 398,
                     width: 300,
@@ -43,7 +42,7 @@ class LoginView extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20)),
                     child: Column(
                       children: [
-                        SizedBox(height: 40),
+                        const SizedBox(height: 40),
                         const Text(
                           "Login",
                           style: TextStyle(
@@ -80,10 +79,10 @@ class LoginView extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Elevatedbutton(text: "Sign in"),
+                        const Elevatedbutton(text: "Sign in"),
                         _text("Or", red.withOpacity(0.5), 15.0),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 110.0,vertical: 10),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 110.0,vertical: 10),
                           child: Row(
                             children: [
                               Image(
@@ -95,9 +94,9 @@ class LoginView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   _text("Don't have an account?", whites, 14.0),
-                  TextButton(onPressed: (){Get.to(SignUpView());}, child: Text("REGISTER",style: TextStyle(color: Colors.white),),)
+                  TextButton(onPressed: (){Get.to(SignUpView());}, child: const Text("REGISTER",style: TextStyle(color: Colors.white),),)
 
                 ],
               ),

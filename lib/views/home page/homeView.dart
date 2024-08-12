@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hacroject/components/bottomNavigation.dart';
 import 'package:hacroject/components/colors.dart';
 import 'package:hacroject/components/searchTextFeild.dart';
 import 'package:hacroject/views/menu/menu.dart';
@@ -63,7 +62,7 @@ class _HomeviewState extends State<Homeview> {
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
                                         color: whites.withOpacity(0.3))),
-                                child: Image(
+                                child: const Image(
                                     image:
                                         AssetImage("assets/images/burger 1.png")),
                               ),
@@ -80,7 +79,7 @@ class _HomeviewState extends State<Homeview> {
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
                                         color: whites.withOpacity(0.3))),
-                                child: Image(
+                                child: const Image(
                                     image:
                                         AssetImage("assets/images/cake 1.png")),
                               ),
@@ -97,7 +96,7 @@ class _HomeviewState extends State<Homeview> {
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
                                         color: whites.withOpacity(0.3))),
-                                child: Image(
+                                child: const Image(
                                     image:
                                         AssetImage("assets/images/taco 1.png")),
                               ),
@@ -114,7 +113,7 @@ class _HomeviewState extends State<Homeview> {
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
                                         color: whites.withOpacity(0.3))),
-                                child: Image(
+                                child: const Image(
                                     image: AssetImage("assets/images/sushi.png")),
                               ),
                               _text("Sushi", whites),
@@ -123,7 +122,7 @@ class _HomeviewState extends State<Homeview> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Padding(
@@ -203,7 +202,7 @@ class _HomeviewState extends State<Homeview> {
                                 ],
                               ),
                             ),
-                            SizedBox(width: 20),
+                            const SizedBox(width: 20),
                             Container(
                               decoration: BoxDecoration(
                                 color: navyBlue,
@@ -295,9 +294,9 @@ class _HomeviewState extends State<Homeview> {
                     SingleChildScrollView(
                       scrollDirection: Axis.vertical,
                       child: Column(children: [
-                        GestureDetector(onTap: (){ Get.to(MenuView());},child: Image(image: AssetImage("assets/images/Card.png"))),
-                        SizedBox(height: 20),
-                        GestureDetector(onTap: (){},child: Image(image: AssetImage("assets/images/Card.png"))),
+                        GestureDetector(onTap: (){ Get.to(const MenuView());},child: const Image(image: AssetImage("assets/images/Card.png"))),
+                        const SizedBox(height: 20),
+                        GestureDetector(onTap: (){},child: const Image(image: AssetImage("assets/images/Card.png"))),
                       ],),
                     )
                     

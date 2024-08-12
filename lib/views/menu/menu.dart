@@ -31,7 +31,7 @@ class _MenuViewState extends State<MenuView> {
             children: [
               Container(
                   child:
-                      Image(image: AssetImage("assets/images/image 18.png"))),
+                      const Image(image: AssetImage("assets/images/image 18.png"))),
               Positioned(
                 top: 20,
                 child: Container(
@@ -44,14 +44,14 @@ class _MenuViewState extends State<MenuView> {
                     children: [
                       Row(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
+                          const Padding(
+                            padding: EdgeInsets.symmetric(
                                 horizontal: 15.0, vertical: 10),
                             child: Image(
                                 image:
                                     AssetImage("assets/images/Frame 22.png")),
                           ),
-                          SizedBox(width: 3),
+                          const SizedBox(width: 3),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -60,11 +60,11 @@ class _MenuViewState extends State<MenuView> {
                                 children: [
                                   _text(
                                       "2972 Westheimer Rd. Santa Ana", whites),
-                                  SizedBox(width: 10),
+                                  const SizedBox(width: 10),
                                   Icon(Icons.arrow_forward_ios, color: whites),
                                 ],
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                             ],
                           )
                         ],
@@ -156,7 +156,7 @@ class _MenuViewState extends State<MenuView> {
                               child: Row(
                                 children: [
                                   Icon(Icons.person_add_alt, color: whites),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 5,
                                   ),
                                   Center(child: _text("Group Order", whites)),
@@ -205,12 +205,12 @@ class _MenuViewState extends State<MenuView> {
                   children: [
                     GestureDetector(
                         onTap: () {
-                          Get.to(FoodView());
+                          Get.to(const FoodView());
                         },
-                        child: Image(
+                        child: const Image(
                             image: AssetImage("assets/images/Item 1.png"))),
-                    SizedBox(height: 20),
-                    Image(image: AssetImage("assets/images/Item 1.png")),
+                    const SizedBox(height: 20),
+                    const Image(image: AssetImage("assets/images/Item 1.png")),
                   ],
                 ),
               )

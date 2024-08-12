@@ -17,10 +17,10 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
   int index = 0;
 
   final screens= [
-    Homeview(),
-    BrowseView(),
-    CartView(),
-    OrderView(),
+    const Homeview(),
+    const BrowseView(),
+    const CartView(),
+    const OrderView(),
     // AccountsView()
 
 
@@ -37,7 +37,7 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
 
           data: NavigationBarThemeData(
 
-              labelTextStyle: MaterialStateProperty.all(TextStyle(fontSize: 15,fontWeight: FontWeight.w500,color: whites))
+              labelTextStyle: WidgetStateProperty.all(TextStyle(fontSize: 15,fontWeight: FontWeight.w500,color: whites))
           ),
           child: NavigationBar(
             backgroundColor: Colors.transparent.withOpacity(0.2),

@@ -42,7 +42,7 @@ class _FoodViewState extends State<FoodView> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Image(image: AssetImage("assets/images/speg.png")),
+              const Image(image: AssetImage("assets/images/speg.png")),
               Container(
                 width: 353,
                 height: 230,
@@ -54,9 +54,9 @@ class _FoodViewState extends State<FoodView> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     _text("Udon Miso", whites, 20.5),
-                    SizedBox(height: 5),
+                    const SizedBox(height: 5),
                     _text("Rs 400", whites, 20.5),
-                    SizedBox(height: 5),
+                    const SizedBox(height: 5),
                     _text(
                         "Our Udon Miso is a comforting bowl of \nthick, handmade udon noodles in a rich\nmiso broth, garnished with tofu, spring \nonions, and vegetables.",
                         whites.withOpacity(0.5),
@@ -106,7 +106,7 @@ class _FoodViewState extends State<FoodView> {
                         _text("Requires", whites.withOpacity(0.4), 15.0)
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
@@ -122,7 +122,7 @@ class _FoodViewState extends State<FoodView> {
                             }),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 9.0,
                     ),
                     Row(
@@ -138,7 +138,7 @@ class _FoodViewState extends State<FoodView> {
                             }),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 9.0,
                     ),
                     Row(
@@ -154,7 +154,7 @@ class _FoodViewState extends State<FoodView> {
                             }),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 9.0,
                     ),
                     Row(
@@ -178,7 +178,7 @@ class _FoodViewState extends State<FoodView> {
                   width: 353,
                   child: ElevatedButton(
                     onPressed: () {
-                      Get.to(OrderView());
+                      Get.to(const OrderView());
                     },
                     child: _text("Add to cart", whites, 15),
                     style: ElevatedButton.styleFrom(
